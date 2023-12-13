@@ -1,8 +1,10 @@
+from telnetlib import EC
+
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
 from locators.main_locators import header_order_button, training_simulator, order_form_1_header, middle_order_button, \
-    cookies
+    cookies, logo_scooter, logo_Yandex
 
 
 class MainPage:
@@ -24,3 +26,9 @@ class MainPage:
 
     def click_cookies(self):
         self.driver.find_element(*cookies).click()
+
+    def click_logo_Scooter(self):
+        self.driver.find_element(*logo_scooter).click()
+
+    def click_logo_Yandex(self):
+        self.driver.find_element(*logo_Yandex).click()

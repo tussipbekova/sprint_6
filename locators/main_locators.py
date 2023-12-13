@@ -10,3 +10,8 @@ order_form_1_header = [By.XPATH, ".//div[@class = 'Order_Header__BZXOb']"]
 
 middle_order_button = [By.XPATH, ".//div[@class = 'Home_FinishButton__1_cWm'] / button[text() = 'Заказать']"]
 
+logo_scooter = [By.XPATH, ".//a[@class = 'Header_LogoScooter__3lsAR']"]
+
+
+logo_Yandex = [By.XPATH, ".//a[@class = 'Header_LogoYandex__3TSOI']"]
+
