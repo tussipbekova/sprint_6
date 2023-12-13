@@ -1,11 +1,5 @@
-import time
-
 import allure
-import pytest
 from selenium import webdriver
-
-from pages.important_questions_page import ImportantQuestionsPage
-from locators.important_questions_locators import *
 from pages.main_page import MainPage
 
 
@@ -16,6 +10,8 @@ class TestOrderOnHeader:
     def setup_class(cls):
         cls.driver = webdriver.Firefox()
 
+    @allure.title('Проверка вопросов и ответов на главной странице')
+    @allure.description('На главной странице проверяем что при клике на вопрос открывается соответствующий ответ')
     def test_redirect_to_logo_scooter(self):
         self.driver.get('https://qa-scooter.praktikum-services.ru/')
 
@@ -32,6 +28,8 @@ class TestOrderOnHeader:
         expected_url = 'https://qa-scooter.praktikum-services.ru/'
         assert expected_url == self.driver.current_url
 
+    @allure.title('Проверка клика  логотипа «Самоката».')
+    @allure.description('На главной странице проверяем что при нажатии на логотип «Самоката» попадаешь на главную страницу «Самоката».')
     def test_redirect_to_logo_yandex(self):
         self.driver.get('https://qa-scooter.praktikum-services.ru/')
 

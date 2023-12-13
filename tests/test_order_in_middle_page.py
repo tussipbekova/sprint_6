@@ -1,7 +1,4 @@
-import time
-
 import allure
-import pytest
 from selenium import webdriver
 
 from pages.main_page import MainPage
@@ -16,6 +13,8 @@ class TestOrderInMiddlePage:
     def setup_class(cls):
         cls.driver = webdriver.Firefox()
 
+    @allure.title('Проверка кнопки «Заказать» внизу страницы')
+    @allure.description('На главной странице проверяем что при клике на  кнопку «Заказать» заполняется форма и создается заказ')
     def test_order_in_middle_page(self):
 
         self.driver.get('https://qa-scooter.praktikum-services.ru/')
