@@ -29,7 +29,7 @@ class TestImportantQuestions:
         important_question_page.scrolldown_to_question_field(question_locator)
 
         # ожидаем кликабельность вопроса
-        important_question_page.wait_for_clickable_question(question_locator)
+        important_question_page.wait_for_clickable(question_locator)
 
         #кликаем по вопросу
         important_question_page.click_question(question_locator)
