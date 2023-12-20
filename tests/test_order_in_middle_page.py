@@ -2,8 +2,8 @@ import allure
 from selenium import webdriver
 
 from pages.main_page import MainPage
-from pages.order_form_1_page import OrderForm1Page
-from pages.order_form_2_page import OrderForm2Page
+from pages.order_page import OrderPage
+
 
 
 class TestOrderInMiddlePage:
@@ -29,7 +29,7 @@ class TestOrderInMiddlePage:
         #ожидаем появления заголовка первой страницы заказа
         main_page.wait_for_load_order_form_1_header()
 
-        order_form_1_page = OrderForm1Page(self.driver)
+        order_form_1_page = OrderPage(self.driver)
         #заполняем поле Имя
         order_form_1_page.set_name('Маргарита')
         # заполняем поле Фамилия
@@ -45,7 +45,7 @@ class TestOrderInMiddlePage:
         #ожидаем появления заголовка второй страницы заказа
         order_form_1_page.wait_for_load_order_form_2_header()
 
-        order_form_2_page = OrderForm2Page(self.driver)
+        order_form_2_page = OrderPage(self.driver)
         # заполняем поле Когда привезти самокат
         order_form_2_page.set_date('14.12.2023')
         # заполняем поле Срок аренды

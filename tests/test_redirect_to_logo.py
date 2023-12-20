@@ -3,7 +3,7 @@ from selenium import webdriver
 from pages.main_page import MainPage
 
 
-class TestOrderOnHeader:
+class TestRedirectToLogo:
     driver = None
 
     @classmethod
