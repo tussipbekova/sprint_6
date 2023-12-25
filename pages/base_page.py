@@ -22,3 +22,7 @@ class BasePage:
     def send_keys(self, locator, value):
         self.driver.find_element(*locator).send_keys(value)
 
+    def scrolldown(self, locator):
+        element = self.driver.find_element(*locator)
+        self.driver.execute_script("arguments[0].scrollIntoView();", element)
+
